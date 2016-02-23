@@ -1,0 +1,105 @@
+array (
+  'request_start_time' => '2014-09-29 18:13:44',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => NULL,
+  'request_end_time' => '2014-09-29 18:13:44',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 363,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.032,
+    'namelookup_time' => 0,
+    'connect_time' => 0.016,
+    'pretransfer_time' => 0.016,
+    'size_upload' => 40,
+    'size_download' => 0,
+    'speed_download' => 0,
+    'speed_upload' => 1250,
+    'download_content_length' => 0,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.032,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-29 18:14:15',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 111111,
+  'request_end_time' => '2014-09-29 18:14:15',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 363,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 6,
+    'speed_download' => 375,
+    'speed_upload' => 2500,
+    'download_content_length' => 6,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-29 20:48:17',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => NULL,
+  'request_end_time' => '2014-09-29 20:48:17',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 363,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.032,
+    'namelookup_time' => 0,
+    'connect_time' => 0.016,
+    'pretransfer_time' => 0.016,
+    'size_upload' => 40,
+    'size_download' => 0,
+    'speed_download' => 0,
+    'speed_upload' => 1250,
+    'download_content_length' => 0,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.032,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////

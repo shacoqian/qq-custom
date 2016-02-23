@@ -1,0 +1,5019 @@
+array (
+  'request_start_time' => '2014-09-30 00:27:00',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>PHP warning</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>PHP warning</h1>
+
+	<p class="message">
+		include(FormModel.php): failed to open stream: No such file or directory	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427)</p>
+		<div class="code"><pre><span class="ln">415</span>                         {
+<span class="ln">416</span>                             include($classFile);
+<span class="ln">417</span>                             if(YII_DEBUG &amp;&amp; basename(realpath($classFile))!==$className.&#039;.php&#039;)
+<span class="ln">418</span>                                 throw new CException(Yii::t(&#039;yii&#039;,&#039;Class name &quot;{class}&quot; does not match class file &quot;{file}&quot;.&#039;, array(
+<span class="ln">419</span>                                     &#039;{class}&#039;=&gt;$className,
+<span class="ln">420</span>                                     &#039;{file}&#039;=&gt;$classFile,
+<span class="ln">421</span>                                 )));
+<span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+<span class="ln">433</span>                     include($path.&#039;.php&#039;);
+<span class="ln">434</span>                 else
+<span class="ln">435</span>                     return false;
+<span class="ln">436</span>             }
+<span class="ln">437</span>             return class_exists($className,false) || interface_exists($className,false);
+<span class="ln">438</span>         }
+<span class="ln">439</span>         return true;
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427): <strong>YiiBase</strong>::<strong>autoload</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>YiiBase</strong>::<strong>autoload</strong>(&quot;FormModel&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\models\\UserModel.php(2): <strong>spl_autoload_call</strong>(&quot;FormModel&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">1</span> &lt;?php
+<span class="error"><span class="ln error-ln">2</span> class UserModel extends FormModel {
+</span><span class="ln">3</span> 
+<span class="ln">4</span> 
+<span class="ln">5</span>     public function rules() {
+<span class="ln">6</span>         return array (
+<span class="ln">7</span>             array(&#039;u_id&#039;, &#039;required&#039;, &#039;on&#039;=&gt;&#039;edit&#039;),
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427): <strong>include</strong>(&quot;D:\\wamp\\www\\myworld\\interface\\protected\\models\\UserModel.php&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>YiiBase</strong>::<strong>autoload</strong>(&quot;UserModel&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(11): <strong>spl_autoload_call</strong>(&quot;UserModel&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">06</span> class AccountController extends SystemController
+<span class="ln">07</span> {
+<span class="ln">08</span>     public $model;
+<span class="ln">09</span>     
+<span class="ln">10</span>     public function init() {
+<span class="error"><span class="ln error-ln">11</span>         $this-&gt;model = new UserModel();
+</span><span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="ln">16</span>         if ($this-&gt;model-&gt;validate) {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(281): <strong>AccountController</strong>-><strong>init</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">276</span>         if(($ca=$this-&gt;createController($route))!==null)
+<span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="error"><span class="ln error-ln">281</span>             $controller-&gt;init();
+</span><span class="ln">282</span>             $controller-&gt;run($actionID);
+<span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:27:00 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:27:00',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 14955,
+    'speed_download' => 934687,
+    'speed_upload' => 2500,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:27:40',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>PHP warning</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>PHP warning</h1>
+
+	<p class="message">
+		include(FormModel.php): failed to open stream: No such file or directory	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427)</p>
+		<div class="code"><pre><span class="ln">415</span>                         {
+<span class="ln">416</span>                             include($classFile);
+<span class="ln">417</span>                             if(YII_DEBUG &amp;&amp; basename(realpath($classFile))!==$className.&#039;.php&#039;)
+<span class="ln">418</span>                                 throw new CException(Yii::t(&#039;yii&#039;,&#039;Class name &quot;{class}&quot; does not match class file &quot;{file}&quot;.&#039;, array(
+<span class="ln">419</span>                                     &#039;{class}&#039;=&gt;$className,
+<span class="ln">420</span>                                     &#039;{file}&#039;=&gt;$classFile,
+<span class="ln">421</span>                                 )));
+<span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+<span class="ln">433</span>                     include($path.&#039;.php&#039;);
+<span class="ln">434</span>                 else
+<span class="ln">435</span>                     return false;
+<span class="ln">436</span>             }
+<span class="ln">437</span>             return class_exists($className,false) || interface_exists($className,false);
+<span class="ln">438</span>         }
+<span class="ln">439</span>         return true;
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427): <strong>YiiBase</strong>::<strong>autoload</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>YiiBase</strong>::<strong>autoload</strong>(&quot;FormModel&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\models\\UserModel.php(2): <strong>spl_autoload_call</strong>(&quot;FormModel&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">1</span> &lt;?php
+<span class="error"><span class="ln error-ln">2</span> class UserModel extends FormModel {
+</span><span class="ln">3</span> 
+<span class="ln">4</span> 
+<span class="ln">5</span>     public function rules() {
+<span class="ln">6</span>         return array (
+<span class="ln">7</span>             array(&#039;u_id&#039;, &#039;required&#039;, &#039;on&#039;=&gt;&#039;edit&#039;),
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\YiiBase.php(427): <strong>include</strong>(&quot;D:\\wamp\\www\\myworld\\interface\\protected\\models\\UserModel.php&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">422</span>                             break;
+<span class="ln">423</span>                         }
+<span class="ln">424</span>                     }
+<span class="ln">425</span>                 }
+<span class="ln">426</span>                 else
+<span class="error"><span class="ln error-ln">427</span>                     include($className.&#039;.php&#039;);
+</span><span class="ln">428</span>             }
+<span class="ln">429</span>             else  // class name with namespace in PHP 5.3
+<span class="ln">430</span>             {
+<span class="ln">431</span>                 $namespace=str_replace(&#039;\\\\&#039;,&#039;.&#039;,ltrim($className,&#039;\\\\&#039;));
+<span class="ln">432</span>                 if(($path=self::getPathOfAlias($namespace))!==false)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+										&nbsp;unknown(0): <strong>YiiBase</strong>::<strong>autoload</strong>(&quot;UserModel&quot;)				</div>
+
+							</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(11): <strong>spl_autoload_call</strong>(&quot;UserModel&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">06</span> class AccountController extends SystemController
+<span class="ln">07</span> {
+<span class="ln">08</span>     public $model;
+<span class="ln">09</span>     
+<span class="ln">10</span>     public function init() {
+<span class="error"><span class="ln error-ln">11</span>         $this-&gt;model = new UserModel();
+</span><span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="ln">16</span>         if ($this-&gt;model-&gt;validate) {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(281): <strong>AccountController</strong>-><strong>init</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">276</span>         if(($ca=$this-&gt;createController($route))!==null)
+<span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="error"><span class="ln error-ln">281</span>             $controller-&gt;init();
+</span><span class="ln">282</span>             $controller-&gt;run($actionID);
+<span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:27:40 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:27:40',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 14955,
+    'speed_download' => 934687,
+    'speed_upload' => 2500,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:29:50',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		Property &quot;UserModel.validate&quot; is not defined.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(16)</p>
+		<div class="code"><pre><span class="ln">04</span>  */
+<span class="ln">05</span> 
+<span class="ln">06</span> class AccountController extends SystemController
+<span class="ln">07</span> {
+<span class="ln">08</span>     public $model;
+<span class="ln">09</span>     
+<span class="ln">10</span>     public function init() {
+<span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="error"><span class="ln error-ln">16</span>         if ($this-&gt;model-&gt;validate) {
+</span><span class="ln">17</span>             print_r($_POST);
+<span class="ln">18</span>         } else {
+<span class="ln">19</span>             echo 111;
+<span class="ln">20</span>         }
+<span class="ln">21</span>     }
+<span class="ln">22</span>     
+<span class="ln">23</span>     public function returnJson() {
+<span class="ln">24</span>     
+<span class="ln">25</span>     }
+<span class="ln">26</span> }
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace app expanded">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(16): <strong>CComponent</strong>-><strong>__get</strong>(&quot;validate&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="error"><span class="ln error-ln">16</span>         if ($this-&gt;model-&gt;validate) {
+</span><span class="ln">17</span>             print_r($_POST);
+<span class="ln">18</span>         } else {
+<span class="ln">19</span>             echo 111;
+<span class="ln">20</span>         }
+<span class="ln">21</span>     }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:29:51 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:29:51',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.109,
+    'namelookup_time' => 0.015,
+    'connect_time' => 0.015,
+    'pretransfer_time' => 0.015,
+    'size_upload' => 40,
+    'size_download' => 19254,
+    'speed_download' => 176642,
+    'speed_upload' => 366,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.109,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:30:29',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		Property &quot;UserModel.u_email&quot; is not defined.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\framework\\validators\\CEmailValidator.php(70)</p>
+		<div class="code"><pre><span class="ln">58</span>      * @since 1.1.13
+<span class="ln">59</span>      */
+<span class="ln">60</span>     public $validateIDN=false;
+<span class="ln">61</span> 
+<span class="ln">62</span>     /**
+<span class="ln">63</span>      * Validates the attribute of the object.
+<span class="ln">64</span>      * If there is any error, the error message is added to the object.
+<span class="ln">65</span>      * @param CModel $object the object being validated
+<span class="ln">66</span>      * @param string $attribute the attribute being validated
+<span class="ln">67</span>      */
+<span class="ln">68</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">69</span>     {
+<span class="error"><span class="ln error-ln">70</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">71</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">72</span>             return;
+<span class="ln">73</span>         if(!$this-&gt;validateValue($value))
+<span class="ln">74</span>         {
+<span class="ln">75</span>             $message=$this-&gt;message!==null?$this-&gt;message:Yii::t(&#039;yii&#039;,&#039;{attribute} is not a valid email address.&#039;);
+<span class="ln">76</span>             $this-&gt;addError($object,$attribute,$message);
+<span class="ln">77</span>         }
+<span class="ln">78</span>     }
+<span class="ln">79</span> 
+<span class="ln">80</span>     /**
+<span class="ln">81</span>      * Validates a static value to see if it is a valid email.
+<span class="ln">82</span>      * Note that this method does not respect {@link allowEmpty} property.
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CEmailValidator.php(70): <strong>CComponent</strong>-><strong>__get</strong>(&quot;u_email&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">65</span>      * @param CModel $object the object being validated
+<span class="ln">66</span>      * @param string $attribute the attribute being validated
+<span class="ln">67</span>      */
+<span class="ln">68</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">69</span>     {
+<span class="error"><span class="ln error-ln">70</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">71</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">72</span>             return;
+<span class="ln">73</span>         if(!$this-&gt;validateValue($value))
+<span class="ln">74</span>         {
+<span class="ln">75</span>             $message=$this-&gt;message!==null?$this-&gt;message:Yii::t(&#039;yii&#039;,&#039;{attribute} is not a valid email address.&#039;);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CValidator.php(213): <strong>CEmailValidator</strong>-><strong>validateAttribute</strong>(UserModel, &quot;u_email&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">208</span>         else
+<span class="ln">209</span>             $attributes=$this-&gt;attributes;
+<span class="ln">210</span>         foreach($attributes as $attribute)
+<span class="ln">211</span>         {
+<span class="ln">212</span>             if(!$this-&gt;skipOnError || !$object-&gt;hasErrors($attribute))
+<span class="error"><span class="ln error-ln">213</span>                 $this-&gt;validateAttribute($object,$attribute);
+</span><span class="ln">214</span>         }
+<span class="ln">215</span>     }
+<span class="ln">216</span> 
+<span class="ln">217</span>     /**
+<span class="ln">218</span>      * Returns the JavaScript needed for performing client-side validation.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(159): <strong>CValidator</strong>-><strong>validate</strong>(UserModel, null)				</div>
+
+				<div class="code"><pre><span class="ln">154</span>         if($clearErrors)
+<span class="ln">155</span>             $this-&gt;clearErrors();
+<span class="ln">156</span>         if($this-&gt;beforeValidate())
+<span class="ln">157</span>         {
+<span class="ln">158</span>             foreach($this-&gt;getValidators() as $validator)
+<span class="error"><span class="ln error-ln">159</span>                 $validator-&gt;validate($this,$attributes);
+</span><span class="ln">160</span>             $this-&gt;afterValidate();
+<span class="ln">161</span>             return !$this-&gt;hasErrors();
+<span class="ln">162</span>         }
+<span class="ln">163</span>         else
+<span class="ln">164</span>             return false;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(16): <strong>CModel</strong>-><strong>validate</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="error"><span class="ln error-ln">16</span>         if ($this-&gt;model-&gt;validate()) {
+</span><span class="ln">17</span>             print_r($_POST);
+<span class="ln">18</span>         } else {
+<span class="ln">19</span>             echo 111;
+<span class="ln">20</span>         }
+<span class="ln">21</span>     }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:30:29 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:30:29',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.125,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 23298,
+    'speed_download' => 186384,
+    'speed_upload' => 320,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.109,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:31:02',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		Property &quot;UserModel.u_passwd&quot; is not defined.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\framework\\validators\\CStringValidator.php(79)</p>
+		<div class="code"><pre><span class="ln">67</span>      * @since 1.1.1
+<span class="ln">68</span>      */
+<span class="ln">69</span>     public $encoding;
+<span class="ln">70</span> 
+<span class="ln">71</span>     /**
+<span class="ln">72</span>      * Validates the attribute of the object.
+<span class="ln">73</span>      * If there is any error, the error message is added to the object.
+<span class="ln">74</span>      * @param CModel $object the object being validated
+<span class="ln">75</span>      * @param string $attribute the attribute being validated
+<span class="ln">76</span>      */
+<span class="ln">77</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">78</span>     {
+<span class="error"><span class="ln error-ln">79</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">80</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">81</span>             return;
+<span class="ln">82</span> 
+<span class="ln">83</span>         if(is_array($value))
+<span class="ln">84</span>         {
+<span class="ln">85</span>             // https://github.com/yiisoft/yii/issues/1955
+<span class="ln">86</span>             $this-&gt;addError($object,$attribute,Yii::t(&#039;yii&#039;,&#039;{attribute} is invalid.&#039;));
+<span class="ln">87</span>             return;
+<span class="ln">88</span>         }
+<span class="ln">89</span> 
+<span class="ln">90</span>         if(function_exists(&#039;mb_strlen&#039;) &amp;&amp; $this-&gt;encoding!==false)
+<span class="ln">91</span>             $length=mb_strlen($value, $this-&gt;encoding ? $this-&gt;encoding : Yii::app()-&gt;charset);
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CStringValidator.php(79): <strong>CComponent</strong>-><strong>__get</strong>(&quot;u_passwd&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">74</span>      * @param CModel $object the object being validated
+<span class="ln">75</span>      * @param string $attribute the attribute being validated
+<span class="ln">76</span>      */
+<span class="ln">77</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">78</span>     {
+<span class="error"><span class="ln error-ln">79</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">80</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">81</span>             return;
+<span class="ln">82</span> 
+<span class="ln">83</span>         if(is_array($value))
+<span class="ln">84</span>         {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CValidator.php(213): <strong>CStringValidator</strong>-><strong>validateAttribute</strong>(UserModel, &quot;u_passwd&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">208</span>         else
+<span class="ln">209</span>             $attributes=$this-&gt;attributes;
+<span class="ln">210</span>         foreach($attributes as $attribute)
+<span class="ln">211</span>         {
+<span class="ln">212</span>             if(!$this-&gt;skipOnError || !$object-&gt;hasErrors($attribute))
+<span class="error"><span class="ln error-ln">213</span>                 $this-&gt;validateAttribute($object,$attribute);
+</span><span class="ln">214</span>         }
+<span class="ln">215</span>     }
+<span class="ln">216</span> 
+<span class="ln">217</span>     /**
+<span class="ln">218</span>      * Returns the JavaScript needed for performing client-side validation.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(159): <strong>CValidator</strong>-><strong>validate</strong>(UserModel, null)				</div>
+
+				<div class="code"><pre><span class="ln">154</span>         if($clearErrors)
+<span class="ln">155</span>             $this-&gt;clearErrors();
+<span class="ln">156</span>         if($this-&gt;beforeValidate())
+<span class="ln">157</span>         {
+<span class="ln">158</span>             foreach($this-&gt;getValidators() as $validator)
+<span class="error"><span class="ln error-ln">159</span>                 $validator-&gt;validate($this,$attributes);
+</span><span class="ln">160</span>             $this-&gt;afterValidate();
+<span class="ln">161</span>             return !$this-&gt;hasErrors();
+<span class="ln">162</span>         }
+<span class="ln">163</span>         else
+<span class="ln">164</span>             return false;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(16): <strong>CModel</strong>-><strong>validate</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="error"><span class="ln error-ln">16</span>         if ($this-&gt;model-&gt;validate()) {
+</span><span class="ln">17</span>             print_r($_POST);
+<span class="ln">18</span>         } else {
+<span class="ln">19</span>             echo 111;
+<span class="ln">20</span>         }
+<span class="ln">21</span>     }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:31:02 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:31:02',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 23149,
+    'speed_download' => 746741,
+    'speed_upload' => 1290,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:31:24',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		Property &quot;UserModel.u_passwd&quot; is not defined.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\framework\\validators\\CStringValidator.php(79)</p>
+		<div class="code"><pre><span class="ln">67</span>      * @since 1.1.1
+<span class="ln">68</span>      */
+<span class="ln">69</span>     public $encoding;
+<span class="ln">70</span> 
+<span class="ln">71</span>     /**
+<span class="ln">72</span>      * Validates the attribute of the object.
+<span class="ln">73</span>      * If there is any error, the error message is added to the object.
+<span class="ln">74</span>      * @param CModel $object the object being validated
+<span class="ln">75</span>      * @param string $attribute the attribute being validated
+<span class="ln">76</span>      */
+<span class="ln">77</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">78</span>     {
+<span class="error"><span class="ln error-ln">79</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">80</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">81</span>             return;
+<span class="ln">82</span> 
+<span class="ln">83</span>         if(is_array($value))
+<span class="ln">84</span>         {
+<span class="ln">85</span>             // https://github.com/yiisoft/yii/issues/1955
+<span class="ln">86</span>             $this-&gt;addError($object,$attribute,Yii::t(&#039;yii&#039;,&#039;{attribute} is invalid.&#039;));
+<span class="ln">87</span>             return;
+<span class="ln">88</span>         }
+<span class="ln">89</span> 
+<span class="ln">90</span>         if(function_exists(&#039;mb_strlen&#039;) &amp;&amp; $this-&gt;encoding!==false)
+<span class="ln">91</span>             $length=mb_strlen($value, $this-&gt;encoding ? $this-&gt;encoding : Yii::app()-&gt;charset);
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CStringValidator.php(79): <strong>CComponent</strong>-><strong>__get</strong>(&quot;u_passwd&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">74</span>      * @param CModel $object the object being validated
+<span class="ln">75</span>      * @param string $attribute the attribute being validated
+<span class="ln">76</span>      */
+<span class="ln">77</span>     protected function validateAttribute($object,$attribute)
+<span class="ln">78</span>     {
+<span class="error"><span class="ln error-ln">79</span>         $value=$object-&gt;$attribute;
+</span><span class="ln">80</span>         if($this-&gt;allowEmpty &amp;&amp; $this-&gt;isEmpty($value))
+<span class="ln">81</span>             return;
+<span class="ln">82</span> 
+<span class="ln">83</span>         if(is_array($value))
+<span class="ln">84</span>         {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\validators\\CValidator.php(213): <strong>CStringValidator</strong>-><strong>validateAttribute</strong>(UserModel, &quot;u_passwd&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">208</span>         else
+<span class="ln">209</span>             $attributes=$this-&gt;attributes;
+<span class="ln">210</span>         foreach($attributes as $attribute)
+<span class="ln">211</span>         {
+<span class="ln">212</span>             if(!$this-&gt;skipOnError || !$object-&gt;hasErrors($attribute))
+<span class="error"><span class="ln error-ln">213</span>                 $this-&gt;validateAttribute($object,$attribute);
+</span><span class="ln">214</span>         }
+<span class="ln">215</span>     }
+<span class="ln">216</span> 
+<span class="ln">217</span>     /**
+<span class="ln">218</span>      * Returns the JavaScript needed for performing client-side validation.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(159): <strong>CValidator</strong>-><strong>validate</strong>(UserModel, null)				</div>
+
+				<div class="code"><pre><span class="ln">154</span>         if($clearErrors)
+<span class="ln">155</span>             $this-&gt;clearErrors();
+<span class="ln">156</span>         if($this-&gt;beforeValidate())
+<span class="ln">157</span>         {
+<span class="ln">158</span>             foreach($this-&gt;getValidators() as $validator)
+<span class="error"><span class="ln error-ln">159</span>                 $validator-&gt;validate($this,$attributes);
+</span><span class="ln">160</span>             $this-&gt;afterValidate();
+<span class="ln">161</span>             return !$this-&gt;hasErrors();
+<span class="ln">162</span>         }
+<span class="ln">163</span>         else
+<span class="ln">164</span>             return false;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(16): <strong>CModel</strong>-><strong>validate</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+<span class="error"><span class="ln error-ln">16</span>         if ($this-&gt;model-&gt;validate()) {
+</span><span class="ln">17</span>             print_r($_POST);
+<span class="ln">18</span>         } else {
+<span class="ln">19</span>             echo 111;
+<span class="ln">20</span>         }
+<span class="ln">21</span>     }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:31:24 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:31:24',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 23149,
+    'speed_download' => 746741,
+    'speed_upload' => 1290,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:31:34',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [email] => 11111
+    [nickname] => 1111
+    [password] => 11111
+)
+',
+  'request_end_time' => '2014-09-30 00:31:34',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 169,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 78,
+    'speed_download' => 2516,
+    'speed_upload' => 1290,
+    'download_content_length' => 78,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:32:03',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [email] => 11111
+    [nickname] => 1111
+    [password] => 11111
+)
+',
+  'request_end_time' => '2014-09-30 00:32:03',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 169,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0.016,
+    'pretransfer_time' => 0.016,
+    'size_upload' => 40,
+    'size_download' => 78,
+    'speed_download' => 2516,
+    'speed_upload' => 1290,
+    'download_content_length' => 78,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:32:34',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 111,
+  'request_end_time' => '2014-09-30 00:32:34',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 168,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.032,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 3,
+    'speed_download' => 93,
+    'speed_upload' => 1250,
+    'download_content_length' => 3,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.032,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:33:09',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 111,
+  'request_end_time' => '2014-09-30 00:33:09',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 168,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.032,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 3,
+    'speed_download' => 93,
+    'speed_upload' => 1250,
+    'download_content_length' => 3,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.032,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:36:42',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => U Email cannot be blank.
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => U Passwd cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => U Nickname cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:36:42',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 282,
+    'speed_download' => 17625,
+    'speed_upload' => 2500,
+    'download_content_length' => 282,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:39:30',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		UserModel has an invalid validation rule. The rule must specify attributes to be validated and the validator name.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(15)</p>
+		<div class="code"><pre><span class="ln">03</span>  *    @desc 用户管理接口
+<span class="ln">04</span>  */
+<span class="ln">05</span> 
+<span class="ln">06</span> class AccountController extends SystemController
+<span class="ln">07</span> {
+<span class="ln">08</span>     public $model;
+<span class="ln">09</span>     
+<span class="ln">10</span>     public function init() {
+<span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="error"><span class="ln error-ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+</span><span class="ln">16</span>         $this-&gt;model-&gt;setScenario(&#039;login&#039;);
+<span class="ln">17</span>         if ($this-&gt;model-&gt;validate()) {
+<span class="ln">18</span>             print_r($_POST);
+<span class="ln">19</span>         } else {
+<span class="ln">20</span>             $error = $this-&gt;model-&gt;getErrors();
+<span class="ln">21</span>             print_r($error);
+<span class="ln">22</span>         }
+<span class="ln">23</span>     }
+<span class="ln">24</span>     
+<span class="ln">25</span>     public function returnJson() {
+<span class="ln">26</span>     
+<span class="ln">27</span>     }
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(260): <strong>CModel</strong>-><strong>createValidators</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">255</span>      * @return array the validators applicable to the current {@link scenario}.
+<span class="ln">256</span>      */
+<span class="ln">257</span>     public function getValidators($attribute=null)
+<span class="ln">258</span>     {
+<span class="ln">259</span>         if($this-&gt;_validators===null)
+<span class="error"><span class="ln error-ln">260</span>             $this-&gt;_validators=$this-&gt;createValidators();
+</span><span class="ln">261</span> 
+<span class="ln">262</span>         $validators=array();
+<span class="ln">263</span>         $scenario=$this-&gt;getScenario();
+<span class="ln">264</span>         foreach($this-&gt;_validators as $validator)
+<span class="ln">265</span>         {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(547): <strong>CModel</strong>-><strong>getValidators</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">542</span>      */
+<span class="ln">543</span>     public function getSafeAttributeNames()
+<span class="ln">544</span>     {
+<span class="ln">545</span>         $attributes=array();
+<span class="ln">546</span>         $unsafe=array();
+<span class="error"><span class="ln error-ln">547</span>         foreach($this-&gt;getValidators() as $validator)
+</span><span class="ln">548</span>         {
+<span class="ln">549</span>             if(!$validator-&gt;safe)
+<span class="ln">550</span>             {
+<span class="ln">551</span>                 foreach($validator-&gt;attributes as $name)
+<span class="ln">552</span>                     $unsafe[]=$name;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(468): <strong>CModel</strong>-><strong>getSafeAttributeNames</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">463</span>      */
+<span class="ln">464</span>     public function setAttributes($values,$safeOnly=true)
+<span class="ln">465</span>     {
+<span class="ln">466</span>         if(!is_array($values))
+<span class="ln">467</span>             return;
+<span class="error"><span class="ln error-ln">468</span>         $attributes=array_flip($safeOnly ? $this-&gt;getSafeAttributeNames() : $this-&gt;attributeNames());
+</span><span class="ln">469</span>         foreach($values as $name=&gt;$value)
+<span class="ln">470</span>         {
+<span class="ln">471</span>             if(isset($attributes[$name]))
+<span class="ln">472</span>                 $this-&gt;$name=$value;
+<span class="ln">473</span>             elseif($safeOnly)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CComponent.php(152): <strong>CModel</strong>-><strong>setAttributes</strong>(array(&quot;email&quot; =&gt; &quot;11111&quot;, &quot;nickname&quot; =&gt; &quot;1111&quot;, &quot;password&quot; =&gt; &quot;11111&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">147</span>      */
+<span class="ln">148</span>     public function __set($name,$value)
+<span class="ln">149</span>     {
+<span class="ln">150</span>         $setter=&#039;set&#039;.$name;
+<span class="ln">151</span>         if(method_exists($this,$setter))
+<span class="error"><span class="ln error-ln">152</span>             return $this-&gt;$setter($value);
+</span><span class="ln">153</span>         elseif(strncasecmp($name,&#039;on&#039;,2)===0 &amp;&amp; method_exists($this,$name))
+<span class="ln">154</span>         {
+<span class="ln">155</span>             // duplicating getEventHandlers() here for performance
+<span class="ln">156</span>             $name=strtolower($name);
+<span class="ln">157</span>             if(!isset($this-&gt;_e[$name]))
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(15): <strong>CComponent</strong>-><strong>__set</strong>(&quot;attributes&quot;, array(&quot;email&quot; =&gt; &quot;11111&quot;, &quot;nickname&quot; =&gt; &quot;1111&quot;, &quot;password&quot; =&gt; &quot;11111&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">10</span>     public function init() {
+<span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="error"><span class="ln error-ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+</span><span class="ln">16</span>         $this-&gt;model-&gt;setScenario(&#039;login&#039;);
+<span class="ln">17</span>         if ($this-&gt;model-&gt;validate()) {
+<span class="ln">18</span>             print_r($_POST);
+<span class="ln">19</span>         } else {
+<span class="ln">20</span>             $error = $this-&gt;model-&gt;getErrors();
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#16			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:39:30 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:39:30',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.046,
+    'namelookup_time' => 0,
+    'connect_time' => 0.015,
+    'pretransfer_time' => 0.015,
+    'size_upload' => 40,
+    'size_download' => 24432,
+    'speed_download' => 531130,
+    'speed_upload' => 869,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:40:09',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => U Email cannot be blank.
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => U Passwd cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => U Nickname cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:40:09',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 282,
+    'speed_download' => 17625,
+    'speed_upload' => 2500,
+    'download_content_length' => 282,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:40:36',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => '<!DOCTYPE html PUBLIC
+	"-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>CException</title>
+
+<style type="text/css">
+/*<![CDATA[*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+body {
+	font: normal 9pt "Verdana";
+	color: #000;
+	background: #fff;
+}
+
+h1 {
+	font: normal 18pt "Verdana";
+	color: #f00;
+	margin-bottom: .5em;
+}
+
+h2 {
+	font: normal 14pt "Verdana";
+	color: #800000;
+	margin-bottom: .5em;
+}
+
+h3 {
+	font: bold 11pt "Verdana";
+}
+
+pre {
+	font: normal 11pt Menlo, Consolas, "Lucida Console", Monospace;
+}
+
+pre span.error {
+	display: block;
+	background: #fce3e3;
+}
+
+pre span.ln {
+	color: #999;
+	padding-right: 0.5em;
+	border-right: 1px solid #ccc;
+}
+
+pre span.error-ln {
+	font-weight: bold;
+}
+
+.container {
+	margin: 1em 4em;
+}
+
+.version {
+	color: gray;
+	font-size: 8pt;
+	border-top: 1px solid #aaa;
+	padding-top: 1em;
+	margin-bottom: 1em;
+}
+
+.message {
+	color: #000;
+	padding: 1em;
+	font-size: 11pt;
+	background: #f3f3f3;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 1em;
+	line-height: 160%;
+}
+
+.source {
+	margin-bottom: 1em;
+}
+
+.code pre {
+	background-color: #ffe;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	line-height: 125%;
+	border: 1px solid #eee;
+}
+
+.source .file {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.traces {
+	margin: 2em 0;
+}
+
+.trace {
+	margin: 0.5em 0;
+	padding: 0.5em;
+}
+
+.trace.app {
+	border: 1px dashed #c00;
+}
+
+.trace .number {
+	text-align: right;
+	width: 2em;
+	padding: 0.5em;
+}
+
+.trace .content {
+	padding: 0.5em;
+}
+
+.trace .plus,
+.trace .minus {
+	display:inline;
+	vertical-align:middle;
+	text-align:center;
+	border:1px solid #000;
+	color:#000;
+	font-size:10px;
+	line-height:10px;
+	margin:0;
+	padding:0 1px;
+	width:10px;
+	height:10px;
+}
+
+.trace.collapsed .minus,
+.trace.expanded .plus,
+.trace.collapsed pre {
+	display: none;
+}
+
+.trace-file {
+	cursor: pointer;
+	padding: 0.2em;
+}
+
+.trace-file:hover {
+	background: #f0ffff;
+}
+/*]]>*/
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>CException</h1>
+
+	<p class="message">
+		UserModel has an invalid validation rule. The rule must specify attributes to be validated and the validator name.	</p>
+
+	<div class="source">
+		<p class="file">D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(15)</p>
+		<div class="code"><pre><span class="ln">03</span>  *    @desc 用户管理接口
+<span class="ln">04</span>  */
+<span class="ln">05</span> 
+<span class="ln">06</span> class AccountController extends SystemController
+<span class="ln">07</span> {
+<span class="ln">08</span>     public $model;
+<span class="ln">09</span>     
+<span class="ln">10</span>     public function init() {
+<span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="error"><span class="ln error-ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+</span><span class="ln">16</span>         $this-&gt;model-&gt;setScenario(&#039;login&#039;);
+<span class="ln">17</span>         if ($this-&gt;model-&gt;validate()) {
+<span class="ln">18</span>             print_r($_POST);
+<span class="ln">19</span>         } else {
+<span class="ln">20</span>             $error = $this-&gt;model-&gt;getErrors();
+<span class="ln">21</span>             print_r($error);
+<span class="ln">22</span>         }
+<span class="ln">23</span>     }
+<span class="ln">24</span>     
+<span class="ln">25</span>     public function returnJson() {
+<span class="ln">26</span>     
+<span class="ln">27</span>     }
+</pre></div>	</div>
+
+	<div class="traces">
+		<h2>Stack Trace</h2>
+				<table style="width:100%;">
+						<tr class="trace core collapsed">
+			<td class="number">
+				#0			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(260): <strong>CModel</strong>-><strong>createValidators</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">255</span>      * @return array the validators applicable to the current {@link scenario}.
+<span class="ln">256</span>      */
+<span class="ln">257</span>     public function getValidators($attribute=null)
+<span class="ln">258</span>     {
+<span class="ln">259</span>         if($this-&gt;_validators===null)
+<span class="error"><span class="ln error-ln">260</span>             $this-&gt;_validators=$this-&gt;createValidators();
+</span><span class="ln">261</span> 
+<span class="ln">262</span>         $validators=array();
+<span class="ln">263</span>         $scenario=$this-&gt;getScenario();
+<span class="ln">264</span>         foreach($this-&gt;_validators as $validator)
+<span class="ln">265</span>         {
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#1			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(547): <strong>CModel</strong>-><strong>getValidators</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">542</span>      */
+<span class="ln">543</span>     public function getSafeAttributeNames()
+<span class="ln">544</span>     {
+<span class="ln">545</span>         $attributes=array();
+<span class="ln">546</span>         $unsafe=array();
+<span class="error"><span class="ln error-ln">547</span>         foreach($this-&gt;getValidators() as $validator)
+</span><span class="ln">548</span>         {
+<span class="ln">549</span>             if(!$validator-&gt;safe)
+<span class="ln">550</span>             {
+<span class="ln">551</span>                 foreach($validator-&gt;attributes as $name)
+<span class="ln">552</span>                     $unsafe[]=$name;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#2			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CModel.php(468): <strong>CModel</strong>-><strong>getSafeAttributeNames</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">463</span>      */
+<span class="ln">464</span>     public function setAttributes($values,$safeOnly=true)
+<span class="ln">465</span>     {
+<span class="ln">466</span>         if(!is_array($values))
+<span class="ln">467</span>             return;
+<span class="error"><span class="ln error-ln">468</span>         $attributes=array_flip($safeOnly ? $this-&gt;getSafeAttributeNames() : $this-&gt;attributeNames());
+</span><span class="ln">469</span>         foreach($values as $name=&gt;$value)
+<span class="ln">470</span>         {
+<span class="ln">471</span>             if(isset($attributes[$name]))
+<span class="ln">472</span>                 $this-&gt;$name=$value;
+<span class="ln">473</span>             elseif($safeOnly)
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#3			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CComponent.php(152): <strong>CModel</strong>-><strong>setAttributes</strong>(array(&quot;email&quot; =&gt; &quot;11111&quot;, &quot;nickname&quot; =&gt; &quot;1111&quot;, &quot;password&quot; =&gt; &quot;11111&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">147</span>      */
+<span class="ln">148</span>     public function __set($name,$value)
+<span class="ln">149</span>     {
+<span class="ln">150</span>         $setter=&#039;set&#039;.$name;
+<span class="ln">151</span>         if(method_exists($this,$setter))
+<span class="error"><span class="ln error-ln">152</span>             return $this-&gt;$setter($value);
+</span><span class="ln">153</span>         elseif(strncasecmp($name,&#039;on&#039;,2)===0 &amp;&amp; method_exists($this,$name))
+<span class="ln">154</span>         {
+<span class="ln">155</span>             // duplicating getEventHandlers() here for performance
+<span class="ln">156</span>             $name=strtolower($name);
+<span class="ln">157</span>             if(!isset($this-&gt;_e[$name]))
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#4			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\controllers\\AccountController.php(15): <strong>CComponent</strong>-><strong>__set</strong>(&quot;attributes&quot;, array(&quot;email&quot; =&gt; &quot;11111&quot;, &quot;nickname&quot; =&gt; &quot;1111&quot;, &quot;password&quot; =&gt; &quot;11111&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">10</span>     public function init() {
+<span class="ln">11</span>         $this-&gt;model = new UserModel();
+<span class="ln">12</span>     }
+<span class="ln">13</span>     
+<span class="ln">14</span>     public function actionAddUser() {
+<span class="error"><span class="ln error-ln">15</span>         $this-&gt;model-&gt;attributes = $_POST;
+</span><span class="ln">16</span>         $this-&gt;model-&gt;setScenario(&#039;login&#039;);
+<span class="ln">17</span>         if ($this-&gt;model-&gt;validate()) {
+<span class="ln">18</span>             print_r($_POST);
+<span class="ln">19</span>         } else {
+<span class="ln">20</span>             $error = $this-&gt;model-&gt;getErrors();
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#5			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\actions\\CInlineAction.php(49): <strong>AccountController</strong>-><strong>actionAddUser</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">44</span>         $controller=$this-&gt;getController();
+<span class="ln">45</span>         $method=new ReflectionMethod($controller, $methodName);
+<span class="ln">46</span>         if($method-&gt;getNumberOfParameters()&gt;0)
+<span class="ln">47</span>             return $this-&gt;runWithParamsInternal($controller, $method, $params);
+<span class="ln">48</span>         else
+<span class="error"><span class="ln error-ln">49</span>             return $controller-&gt;$methodName();
+</span><span class="ln">50</span>     }
+<span class="ln">51</span> 
+<span class="ln">52</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#6			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(308): <strong>CInlineAction</strong>-><strong>runWithParams</strong>(array())				</div>
+
+				<div class="code"><pre><span class="ln">303</span>     {
+<span class="ln">304</span>         $priorAction=$this-&gt;_action;
+<span class="ln">305</span>         $this-&gt;_action=$action;
+<span class="ln">306</span>         if($this-&gt;beforeAction($action))
+<span class="ln">307</span>         {
+<span class="error"><span class="ln error-ln">308</span>             if($action-&gt;runWithParams($this-&gt;getActionParams())===false)
+</span><span class="ln">309</span>                 $this-&gt;invalidActionParams($action);
+<span class="ln">310</span>             else
+<span class="ln">311</span>                 $this-&gt;afterAction($action);
+<span class="ln">312</span>         }
+<span class="ln">313</span>         $this-&gt;_action=$priorAction;
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#7			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(133): <strong>CController</strong>-><strong>runAction</strong>(CInlineAction)				</div>
+
+				<div class="code"><pre><span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="ln">130</span>             $filter-&gt;filter($this);
+<span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="error"><span class="ln error-ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+</span><span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#8			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\protected\\components\\SystemController.php(53): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">48</span>         if(! $this-&gt;isCheck ()) {
+<span class="ln">49</span>             if(! in_array ( $this-&gt;getAction()-&gt;getId(), $this-&gt;authlessActions ( $this-&gt;getId() ) ) ) { //未例外
+<span class="ln">50</span> 
+<span class="ln">51</span>             }
+<span class="ln">52</span>         } 
+<span class="error"><span class="ln error-ln">53</span>         $filterChain-&gt;run ();
+</span><span class="ln">54</span>     }
+<span class="ln">55</span>     
+<span class="ln">56</span>     /**
+<span class="ln">57</span>      * 验证是否可调用接口 
+<span class="ln">58</span>      */
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#9			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CInlineFilter.php(58): <strong>SystemController</strong>-><strong>filterAccessAuth</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">53</span>      * @param CFilterChain $filterChain the filter chain that the filter is on.
+<span class="ln">54</span>      */
+<span class="ln">55</span>     public function filter($filterChain)
+<span class="ln">56</span>     {
+<span class="ln">57</span>         $method=&#039;filter&#039;.$this-&gt;name;
+<span class="error"><span class="ln error-ln">58</span>         $filterChain-&gt;controller-&gt;$method($filterChain);
+</span><span class="ln">59</span>     }
+<span class="ln">60</span> }
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#10			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\filters\\CFilterChain.php(130): <strong>CInlineFilter</strong>-><strong>filter</strong>(CFilterChain)				</div>
+
+				<div class="code"><pre><span class="ln">125</span>     {
+<span class="ln">126</span>         if($this-&gt;offsetExists($this-&gt;filterIndex))
+<span class="ln">127</span>         {
+<span class="ln">128</span>             $filter=$this-&gt;itemAt($this-&gt;filterIndex++);
+<span class="ln">129</span>             Yii::trace(&#039;Running filter &#039;.($filter instanceof CInlineFilter ? get_class($this-&gt;controller).&#039;.filter&#039;.$filter-&gt;name.&#039;()&#039;:get_class($filter).&#039;.filter()&#039;),&#039;system.web.filters.CFilterChain&#039;);
+<span class="error"><span class="ln error-ln">130</span>             $filter-&gt;filter($this);
+</span><span class="ln">131</span>         }
+<span class="ln">132</span>         else
+<span class="ln">133</span>             $this-&gt;controller-&gt;runAction($this-&gt;action);
+<span class="ln">134</span>     }
+<span class="ln">135</span> }</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#11			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(291): <strong>CFilterChain</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">286</span>             $this-&gt;runAction($action);
+<span class="ln">287</span>         else
+<span class="ln">288</span>         {
+<span class="ln">289</span>             $priorAction=$this-&gt;_action;
+<span class="ln">290</span>             $this-&gt;_action=$action;
+<span class="error"><span class="ln error-ln">291</span>             CFilterChain::create($this,$action,$filters)-&gt;run();
+</span><span class="ln">292</span>             $this-&gt;_action=$priorAction;
+<span class="ln">293</span>         }
+<span class="ln">294</span>     }
+<span class="ln">295</span> 
+<span class="ln">296</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#12			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CController.php(265): <strong>CController</strong>-><strong>runActionWithFilters</strong>(CInlineAction, array(&quot;accessAuth&quot;))				</div>
+
+				<div class="code"><pre><span class="ln">260</span>         {
+<span class="ln">261</span>             if(($parent=$this-&gt;getModule())===null)
+<span class="ln">262</span>                 $parent=Yii::app();
+<span class="ln">263</span>             if($parent-&gt;beforeControllerAction($this,$action))
+<span class="ln">264</span>             {
+<span class="error"><span class="ln error-ln">265</span>                 $this-&gt;runActionWithFilters($action,$this-&gt;filters());
+</span><span class="ln">266</span>                 $parent-&gt;afterControllerAction($this,$action);
+<span class="ln">267</span>             }
+<span class="ln">268</span>         }
+<span class="ln">269</span>         else
+<span class="ln">270</span>             $this-&gt;missingAction($actionID);
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#13			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(282): <strong>CController</strong>-><strong>run</strong>(&quot;addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">277</span>         {
+<span class="ln">278</span>             list($controller,$actionID)=$ca;
+<span class="ln">279</span>             $oldController=$this-&gt;_controller;
+<span class="ln">280</span>             $this-&gt;_controller=$controller;
+<span class="ln">281</span>             $controller-&gt;init();
+<span class="error"><span class="ln error-ln">282</span>             $controller-&gt;run($actionID);
+</span><span class="ln">283</span>             $this-&gt;_controller=$oldController;
+<span class="ln">284</span>         }
+<span class="ln">285</span>         else
+<span class="ln">286</span>             throw new CHttpException(404,Yii::t(&#039;yii&#039;,&#039;Unable to resolve the request &quot;{route}&quot;.&#039;,
+<span class="ln">287</span>                 array(&#039;{route}&#039;=&gt;$route===&#039;&#039;?$this-&gt;defaultController:$route)));
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#14			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\web\\CWebApplication.php(141): <strong>CWebApplication</strong>-><strong>runController</strong>(&quot;account/addUser&quot;)				</div>
+
+				<div class="code"><pre><span class="ln">136</span>             foreach(array_splice($this-&gt;catchAllRequest,1) as $name=&gt;$value)
+<span class="ln">137</span>                 $_GET[$name]=$value;
+<span class="ln">138</span>         }
+<span class="ln">139</span>         else
+<span class="ln">140</span>             $route=$this-&gt;getUrlManager()-&gt;parseUrl($this-&gt;getRequest());
+<span class="error"><span class="ln error-ln">141</span>         $this-&gt;runController($route);
+</span><span class="ln">142</span>     }
+<span class="ln">143</span> 
+<span class="ln">144</span>     /**
+<span class="ln">145</span>      * Registers the core application components.
+<span class="ln">146</span>      * This method overrides the parent implementation by registering additional core components.
+</pre></div>			</td>
+		</tr>
+						<tr class="trace core collapsed">
+			<td class="number">
+				#15			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\framework\\base\\CApplication.php(180): <strong>CWebApplication</strong>-><strong>processRequest</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">175</span>     public function run()
+<span class="ln">176</span>     {
+<span class="ln">177</span>         if($this-&gt;hasEventHandler(&#039;onBeginRequest&#039;))
+<span class="ln">178</span>             $this-&gt;onBeginRequest(new CEvent($this));
+<span class="ln">179</span>         register_shutdown_function(array($this,&#039;end&#039;),0,false);
+<span class="error"><span class="ln error-ln">180</span>         $this-&gt;processRequest();
+</span><span class="ln">181</span>         if($this-&gt;hasEventHandler(&#039;onEndRequest&#039;))
+<span class="ln">182</span>             $this-&gt;onEndRequest(new CEvent($this));
+<span class="ln">183</span>     }
+<span class="ln">184</span> 
+<span class="ln">185</span>     /**
+</pre></div>			</td>
+		</tr>
+						<tr class="trace app expanded">
+			<td class="number">
+				#16			</td>
+			<td class="content">
+				<div class="trace-file">
+											<div class="plus">+</div>
+						<div class="minus">–</div>
+										&nbsp;D:\\wamp\\www\\myworld\\interface\\index.php(28): <strong>CApplication</strong>-><strong>run</strong>()				</div>
+
+				<div class="code"><pre><span class="ln">23</span> 
+<span class="ln">24</span> //设置runtime目录
+<span class="ln">25</span> $app-&gt;setRuntimePath(dirname(__FILE__) . DIRECTORY_SEPARATOR . &#039;runtime&#039;);
+<span class="ln">26</span> 
+<span class="ln">27</span> //run
+<span class="error"><span class="ln error-ln">28</span> $app-&gt;run();</span></pre></div>			</td>
+		</tr>
+				</table>
+	</div>
+
+	<div class="version">
+		2014-09-30 00:40:36 Apache/2.2.25 (Win32) PHP/5.3.28 <a href="http://www.yiiframework.com/">Yii Framework</a>/1.1.15	</div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var traceReg = new RegExp("(^|\\\\s)trace-file(\\\\s|$)");
+var collapsedReg = new RegExp("(^|\\\\s)collapsed(\\\\s|$)");
+
+var e = document.getElementsByTagName("div");
+for(var j=0,len=e.length;j<len;j++){
+	if(traceReg.test(e[j].className)){
+		e[j].onclick = function(){
+			var trace = this.parentNode.parentNode;
+			if(collapsedReg.test(trace.className))
+				trace.className = trace.className.replace("collapsed", "expanded");
+			else
+				trace.className = trace.className.replace("expanded", "collapsed");
+		}
+	}
+}
+/*]]>*/
+</script>
+
+</body>
+</html>
+',
+  'request_end_time' => '2014-09-30 00:40:36',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 500,
+    'header_size' => 187,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.016,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 24432,
+    'speed_download' => 1527000,
+    'speed_upload' => 2500,
+    'download_content_length' => -1,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.016,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:41:12',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => U Email cannot be blank.
+            [1] => 邮件格式不正确
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => U Passwd cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => U Nickname cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:41:12',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 323,
+    'speed_download' => 10419,
+    'speed_upload' => 1290,
+    'download_content_length' => 323,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:46:29',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => 邮件 cannot be blank.
+            [1] => 邮件格式不正确
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => 密码 cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => 昵称 cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:46:29',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.015,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 40,
+    'size_download' => 316,
+    'speed_download' => 21066,
+    'speed_upload' => 2666,
+    'download_content_length' => 316,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.015,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:58:30',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=11111&nickname=1111&password=11111',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => 不能为空
+            [1] => 邮件格式不正确
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => 密码 cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => 昵称 cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:58:30',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 176,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0.015,
+    'connect_time' => 0.015,
+    'pretransfer_time' => 0.015,
+    'size_upload' => 40,
+    'size_download' => 305,
+    'speed_download' => 9838,
+    'speed_upload' => 1290,
+    'download_content_length' => 305,
+    'upload_content_length' => 40,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 00:59:35',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=dssdfsadf&nickname=sdfasdf&password=sadfsadfsadf',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => 密码不能为空
+            [1] => 邮件格式不正确
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => U Passwd cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => U Nickname cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 00:59:35',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 190,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 54,
+    'size_download' => 317,
+    'speed_download' => 10225,
+    'speed_upload' => 1741,
+    'download_content_length' => 317,
+    'upload_content_length' => 54,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 01:00:42',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'email=dssdfsadf&nickname=sdfasdf&password=sadfsadfsadf',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => 邮件不能为空
+            [1] => 邮件格式不正确
+        )
+
+    [u_passwd] => Array
+        (
+            [0] => U Passwd cannot be blank.
+        )
+
+    [u_nickname] => Array
+        (
+            [0] => U Nickname cannot be blank.
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 01:00:42',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 170,
+    'request_size' => 190,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.031,
+    'namelookup_time' => 0,
+    'connect_time' => 0.015,
+    'pretransfer_time' => 0.015,
+    'size_upload' => 54,
+    'size_download' => 317,
+    'speed_download' => 10225,
+    'speed_upload' => 1741,
+    'download_content_length' => 317,
+    'upload_content_length' => 54,
+    'starttransfer_time' => 0.031,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-30 01:02:11',
+  'request_url' => 'http://myworld.com//account/addUser',
+  'request_data' => 'u_email=111&u_nickname=dfsdf&u_passwd=sdfsdf',
+  'response_data' => 'Array
+(
+    [u_email] => Array
+        (
+            [0] => 邮件格式不正确
+        )
+
+)
+',
+  'request_end_time' => '2014-09-30 01:02:11',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://myworld.com//account/addUser',
+    'content_type' => 'text/html',
+    'http_code' => 200,
+    'header_size' => 169,
+    'request_size' => 180,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.047,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 44,
+    'size_download' => 95,
+    'speed_download' => 2021,
+    'speed_upload' => 936,
+    'download_content_length' => 95,
+    'upload_content_length' => 44,
+    'starttransfer_time' => 0.047,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////

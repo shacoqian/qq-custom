@@ -1,0 +1,137 @@
+array (
+  'request_start_time' => '2014-09-25 20:49:39',
+  'request_url' => 'http://172.16.10.79:8080/hw-sq-wy-web/reply/search.do',
+  'request_data' => 'villageId=8032&startDate=&endDate=&isRead=&page=0&size=99999&id=0&isLater=1&key=16a3437e-8e0e-46a2-ba6e-b8e747faefb0',
+  'response_data' => 
+  array (
+    'status' => '1',
+    'data' => NULL,
+    'detail' => '请求数据成功!',
+    'key' => '16a3437e-8e0e-46a2-ba6e-b8e747faefb0',
+  ),
+  'request_end_time' => '2014-09-25 20:49:40',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://172.16.10.79:8080/hw-sq-wy-web/reply/search.do',
+    'content_type' => 'application/json;charset=UTF-8',
+    'http_code' => 200,
+    'header_size' => 157,
+    'request_size' => 271,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.156,
+    'namelookup_time' => 0,
+    'connect_time' => 0.031,
+    'pretransfer_time' => 0.031,
+    'size_upload' => 116,
+    'size_download' => 102,
+    'speed_download' => 653,
+    'speed_upload' => 743,
+    'download_content_length' => -1,
+    'upload_content_length' => 116,
+    'starttransfer_time' => 0.156,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
+array (
+  'request_start_time' => '2014-09-25 20:49:40',
+  'request_url' => 'http://172.16.10.79:8080/hw-sq-wy-web/reply/search.do',
+  'request_data' => 'villageId=8032&startDate=&endDate=&isRead=&page=0&size=10&id=0&isLater=0&key=16a3437e-8e0e-46a2-ba6e-b8e747faefb0',
+  'response_data' => 
+  array (
+    'status' => '1',
+    'data' => 
+    array (
+      'content' => 
+      array (
+        0 => 
+        array (
+          'topicId' => 1001359392,
+          'replyTime' => '2014-09-25 20:46:02.0',
+          'replyUid' => 1000276000275,
+          'nickName' => '可爱的小高',
+          'topic' => NULL,
+          'content' => '手机控',
+          'image' => NULL,
+          'audio' => NULL,
+          'pls' => 0,
+          'type' => 24,
+          'isRead' => 0,
+        ),
+        1 => 
+        array (
+          'topicId' => 1001359390,
+          'replyTime' => '2014-09-25 20:45:47.0',
+          'replyUid' => 1000276000275,
+          'nickName' => '匿名',
+          'topic' => NULL,
+          'content' => 'HK哦YY',
+          'image' => NULL,
+          'audio' => NULL,
+          'pls' => 0,
+          'type' => 24,
+          'isRead' => 0,
+        ),
+        2 => 
+        array (
+          'topicId' => 1001315319,
+          'replyTime' => '2014-09-25 19:34:04.0',
+          'replyUid' => 1000276000275,
+          'nickName' => '匿名',
+          'topic' => NULL,
+          'content' => '来咯哦兔兔',
+          'image' => NULL,
+          'audio' => NULL,
+          'pls' => 1,
+          'type' => 24,
+          'isRead' => 0,
+        ),
+      ),
+      'numberOfElements' => 3,
+      'lastPage' => true,
+      'firstPage' => true,
+      'sort' => NULL,
+      'totalElements' => 3,
+      'totalPages' => 1,
+      'size' => 10,
+      'number' => 0,
+    ),
+    'detail' => '请求数据成功!',
+    'key' => '16a3437e-8e0e-46a2-ba6e-b8e747faefb0',
+  ),
+  'request_end_time' => '2014-09-25 20:49:40',
+  'curl_request_info' => 
+  array (
+    'url' => 'http://172.16.10.79:8080/hw-sq-wy-web/reply/search.do',
+    'content_type' => 'application/json;charset=UTF-8',
+    'http_code' => 200,
+    'header_size' => 157,
+    'request_size' => 268,
+    'filetime' => -1,
+    'ssl_verify_result' => 0,
+    'redirect_count' => 0,
+    'total_time' => 0.14,
+    'namelookup_time' => 0,
+    'connect_time' => 0,
+    'pretransfer_time' => 0,
+    'size_upload' => 113,
+    'size_download' => 826,
+    'speed_download' => 5899,
+    'speed_upload' => 807,
+    'download_content_length' => -1,
+    'upload_content_length' => 113,
+    'starttransfer_time' => 0.14,
+    'redirect_time' => 0,
+    'certinfo' => 
+    array (
+    ),
+    'redirect_url' => '',
+  ),
+)
+////////////////////////////////////////////////////////////////////////////////
